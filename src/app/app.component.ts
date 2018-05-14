@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Anderson Rodrigues de Almeida';
   public nome:string = "";
+  public numero1: number = 0;
+  public numero2: number = 0;
+  //utiliza o | para definir uma variável com mais de 1 tipo
+  public resultado: number|string|any = 0;
 
   public mostrar(){
     console.log(this.nome);
@@ -15,6 +19,21 @@ export class AppComponent {
     alert('Até aqui tudo funcionando!');
   }
 
+  public somar(){
+    this.resultado = parseFloat(this.numero1+"") + parseFloat(this.numero2.toString());
+  }
+
+  public multiplicar(){
+    this.resultado = parseFloat(this.numero1+"") * parseFloat(this.numero2+"");
+  }
+
+  public subtrair(){
+    this.resultado = parseFloat(this.numero1+"") - parseFloat(this.numero2+"");
+  }
+
+  public dividir(){
+    this.resultado = parseFloat(this.numero1+"") / parseFloat(this.numero2+"");
+  }
   
 
 }

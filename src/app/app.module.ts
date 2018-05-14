@@ -8,6 +8,9 @@ import {MatButtonModule, MatCheckboxModule,MatSliderModule,
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppComponent } from './app.component';
 import {MatInputModule} from '@angular/material/input';
+
+import { MatSelectModule } from '@angular/material/select';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 @NgModule({
@@ -17,7 +20,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, MatCheckboxModule, MatSelectModule,
     MatAutocompleteModule, MatInputModule, MatFormFieldModule,
     FormsModule,MatSliderModule
   ],

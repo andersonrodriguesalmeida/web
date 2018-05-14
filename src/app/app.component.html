@@ -25,6 +25,46 @@
     <button mat-button color="primary" (click)="mostrar()">Abrir</button>
   </div>
 
+  <div style="color:blue;">
+    <mat-form-field >
+      <input matInput placeholder="Digite o primeiro número " 
+        [(ngModel)]="numero1">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Digite o segundo número " 
+        [(ngModel)]="numero2">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Resultado" 
+        [(ngModel)]="resultado">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="somar()">Somar</button>
+  </div>
+
+  <div style="color:blue;">
+    <mat-form-field >
+      <input matInput placeholder="Digite o primeiro número "
+       [(ngModel)]="numero1">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Digite o segundo número " 
+      [(ngModel)]="numero2">
+    </mat-form-field>  
+    <mat-form-field>
+      <mat-select placeholder="Operação">
+        <mat-option [value]="'+''">Somar</mat-option>
+        <mat-option [value]="'-''">Subtrair</mat-option>
+        <mat-option [value]="'*''">Multiplicar</mat-option>
+        <mat-option [value]="'/''">Dividir</mat-option>
+      </mat-select>
+    </mat-form-field>  
+    <button mat-button color="primary" 
+      (click)="calcular()">Calcular</button>
+      <mat-form-field >
+        <input matInput placeholder="Resultado " 
+        [(ngModel)]="resultado">
+      </mat-form-field>
+  </div>
 
 </ul>
 
