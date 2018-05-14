@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import {MatButtonModule, MatCheckboxModule,MatSliderModule,
   MatButtonToggle
@@ -14,6 +16,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
     MatAutocompleteModule, MatInputModule, MatFormFieldModule,
     FormsModule,MatSliderModule
