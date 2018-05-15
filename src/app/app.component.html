@@ -51,11 +51,11 @@
       [(ngModel)]="numero2">
     </mat-form-field>  
     <mat-form-field>
-      <mat-select placeholder="Operação">
-        <mat-option [value]="'+''">Somar</mat-option>
-        <mat-option [value]="'-''">Subtrair</mat-option>
-        <mat-option [value]="'*''">Multiplicar</mat-option>
-        <mat-option [value]="'/''">Dividir</mat-option>
+      <mat-select placeholder="Operação" [(ngModel)]="operacao">
+        <mat-option [value]="'+'">Somar</mat-option>
+        <mat-option [value]="'-'">Subtrair</mat-option>
+        <mat-option [value]="'*'">Multiplicar</mat-option>
+        <mat-option [value]="'/'">Dividir</mat-option>
       </mat-select>
     </mat-form-field>  
     <button mat-button color="primary" 

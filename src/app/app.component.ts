@@ -12,6 +12,28 @@ export class AppComponent {
   public numero2: number = 0;
   //utiliza o | para definir uma variável com mais de 1 tipo
   public resultado: number|string|any = 0;
+  public operacao:string = '+';
+
+  public calcular(){
+    switch (this.operacao){
+      case '+': case 'somar':
+        this.somar();
+        break;
+      case '*':
+        this.multiplicar();
+        break;
+      case '-':
+        this.subtrair();
+        break;
+      case '/':
+        this.dividir();
+        break;
+      default:
+        this.resultado = 'não soube usar o sistema!';
+        alert('leitão');
+        break;
+    }
+  }
 
   public mostrar(){
     console.log(this.nome);
