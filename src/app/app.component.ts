@@ -50,6 +50,9 @@ export class AppComponent {
   }
 
   public subtrair(){
+
+    
+
     this.resultado = parseFloat(this.numero1+"") - parseFloat(this.numero2+"");
   }
 

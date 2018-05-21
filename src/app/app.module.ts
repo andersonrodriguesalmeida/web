@@ -3,14 +3,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import {MatButtonModule, MatCheckboxModule,MatSliderModule,
-  MatButtonToggle
+  MatButtonToggle,
+  MatNativeDateModule
 } from '@angular/material';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppComponent } from './app.component';
 import {MatInputModule} from '@angular/material/input';
 
 import { MatSelectModule } from '@angular/material/select';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,MatDatepickerModule,
+    MatNativeDateModule ,
     MatButtonModule, MatCheckboxModule, MatSelectModule,
     MatAutocompleteModule, MatInputModule, MatFormFieldModule,
     FormsModule,MatSliderModule
