@@ -4,7 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {MatButtonModule, MatCheckboxModule,MatSliderModule,
   MatButtonToggle,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatListModule,
+  MatSidenavModule
 } from '@angular/material';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppComponent } from './app.component';
@@ -17,19 +19,24 @@ import { FormsModule } from '@angular/forms';
 import { AlterarSenha} from './pages/alterar-senha/alterar-senha';
 import { CadastroCliente } from
  './pages/cadastro-cliente/cadastro-cliente';
+ import { MatExpansionModule } from '@angular/material/expansion';
+import { Menu } from './componentes/menu/menu';
+import { AppRoute } from './app-router';
+
 @NgModule({
   declarations: [
     AppComponent,
     CadastroCliente,
-    AlterarSenha
+    AlterarSenha,
+    Menu
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-
-    MatDatepickerModule,    MatNativeDateModule ,
-
-
+    MatExpansionModule,
+    MatListModule,
+    MatSidenavModule,
+    AppRoute,
+    BrowserModule,BrowserAnimationsModule,
+    MatDatepickerModule,   MatNativeDateModule ,
     MatButtonModule, MatCheckboxModule, MatSelectModule,
     MatAutocompleteModule, MatInputModule, MatFormFieldModule,
     FormsModule,MatSliderModule
