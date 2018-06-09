@@ -6,7 +6,8 @@ import {MatButtonModule, MatCheckboxModule,MatSliderModule,
   MatButtonToggle,
   MatNativeDateModule,
   MatListModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatCardModule
 } from '@angular/material';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppComponent } from './app.component';
@@ -15,14 +16,14 @@ import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlterarSenha} from './pages/alterar-senha/alterar-senha';
 import { CadastroCliente } from
  './pages/cadastro-cliente/cadastro-cliente';
  import { MatExpansionModule } from '@angular/material/expansion';
 import { Menu } from './componentes/menu/menu';
 import { AppRoute } from './app-router';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { AppRoute } from './app-router';
     MatExpansionModule,
     MatListModule,
     MatSidenavModule,
-    AppRoute,
+    AppRoute,FlexLayoutModule,
+    MatCardModule,ReactiveFormsModule,
     BrowserModule,BrowserAnimationsModule,
     MatDatepickerModule,   MatNativeDateModule ,
     MatButtonModule, MatCheckboxModule, MatSelectModule,
