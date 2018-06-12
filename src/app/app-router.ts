@@ -2,6 +2,7 @@ import { Router, Routes, RouterModule, NavigationStart, NavigationError } from '
 import { CadastroCliente } from './pages/cadastro-cliente/cadastro-cliente';
 import { NgModule } from '@angular/core';
 import { AlterarSenha } from './pages/alterar-senha/alterar-senha';
+import { CadastroGrupoUsuario } from './pages/cadastro-grupousuario/cadastro-grupousuario';
 
 export const appRoutes: Routes = [
     /**
@@ -14,6 +15,9 @@ export const appRoutes: Routes = [
     },{
         path:'alterar-senha',
         component:AlterarSenha
+    },{
+        path:'cadastrar-grupousuario',
+        component: CadastroGrupoUsuario
     }
 ]
 @NgModule({

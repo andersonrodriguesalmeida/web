@@ -24,12 +24,15 @@ import { CadastroCliente } from
 import { Menu } from './componentes/menu/menu';
 import { AppRoute } from './app-router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CadastroGrupoUsuario } from './pages/cadastro-grupousuario/cadastro-grupousuario';
+
 @NgModule({
   declarations: [
     AppComponent,
     CadastroCliente,
     AlterarSenha,
-    Menu
+    Menu,
+    CadastroGrupoUsuario
   ],
   imports: [
     MatExpansionModule,
