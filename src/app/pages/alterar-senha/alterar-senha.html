@@ -30,7 +30,7 @@
         </div>
         <div fxLayout="row" >
             <mat-form-field fxFlex="100%">
-                <input matInput type="password" [(ngModel)]="usuario.senha"
+                <input matInput type="password" [(ngModel)]="usuario.senha" (change)="onChangeNewSenha()"
                     placeholder="Nova Senha"
                     formControlName="senha"  required>
                 <mat-error align="start"
@@ -44,15 +44,14 @@
         </div>
         <div fxLayout="row" >
             <mat-form-field fxFlex="100%">
-                <input matInput type="password" [(ngModel)]="confirmeSenha" 
+                <input matInput type="password" [(ngModel)]="confirmeSenha" (change)="onChangeNewSenha()"
                     placeholder="Confirme a senha"
                     formControlName="confirmeSenha"  required>
                 <mat-error align="start"
                         *ngIf="formGroup.controls['confirmeSenha'].hasError('required')" >
                         Campo obrigatório</mat-error>
-                <mat-hint align="start" *ngIf="formGroup.controls['confirmeSenha'].errors?.equalTo && form.controls['confirmeSenha'].touched" 
-                    class="mat-text-warn" >Senhas não conferem</mat-hint>
-
+                <mat-error align="start" *ngIf="formGroup.controls['confirmeSenha'].hasError('senhaNaoConfere') " 
+                    class="mat-text-warn" >Senhas não conferem</mat-error>
             </mat-form-field>
         </div>
     </div>

@@ -23,7 +23,7 @@ export class AlterarSenha implements OnInit {
          * Criando as validações para os campos da tela (Campo Obrigatório)
          */
         const novaSenha = new FormControl('', Validators.compose([Validators.required, Validators.minLength(6),Validators.maxLength(50)]));
-        const confirmeSenha = new FormControl('', Validators.required);
+        const confirmeSenha = new FormControl('',CustomValidators.equalTo(novaSenha));
         
         this.formGroup = this.fb.group({
             nome: ['', Validators.compose([Validators.required])],
@@ -43,6 +43,17 @@ export class AlterarSenha implements OnInit {
             this.usuario = JSON.parse(user);
         }
     }
+
+    public onChangeNewSenha(){
+        if ( this.confirmeSenha != null && this.usuario.senha != null){
+            if (this.confirmeSenha != this.usuario.senha ){
+                this.formGroup.controls.confirmeSenha.setErrors({ senhaNaoConfere: true} );
+            }else {
+                this.formGroup.controls.confirmeSenha.setErrors(null);
+            }
+        }
+    }
+
 
     public salvar(){
         console.log(this.usuario);
